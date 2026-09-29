@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduGenie — Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="brand"><span class="logo">E</span><div><h1>EduGenie</h1><p>Google Gemini Powered Learning Assistant</p></div></div>
+      <span id="status" class="status">Ready</span>
+    </header>
+
+    <section class="hero">
+      <h2>Learn smarter, one topic at a time.</h2>
+      <p>Ask questions, simplify concepts, generate quizzes, summarize notes, or build a learning path.</p>
+    </section>
+
+    <section class="card">
+      <label for="task">Choose a task</label>
+      <select id="task">
+        <option value="qa">Question & Answer</option>
+        <option value="explain">Explain a Concept</option>
+        <option value="quiz">Generate Quiz</option>
+        <option value="summarize">Summarize Text</option>
+        <option value="learn">Recommend Learning Path</option>
+      </select>
+
+      <label for="inputText">Your input</label>
+      <textarea id="inputText" rows="9" placeholder="Ask a question or paste educational content..."></textarea>
+      <div class="actions"><button id="submitBtn">Generate</button><button id="clearBtn" class="secondary">Clear</button></div>
+    </section>
+
+    <section class="card result-card">
+      <div class="result-head"><h3>Result</h3><button id="copyBtn" class="copy">Copy</button></div>
+      <div id="result" class="result empty">Your AI-generated result will appear here.</div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
